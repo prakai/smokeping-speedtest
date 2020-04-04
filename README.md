@@ -19,11 +19,11 @@ Parameters:
 * binary => The location of your speedtest binary (/usr/bin/speedtest).
 * server => The server id you want to test against (optional). If unspecified, speedtest.net will select the closest server to you. The value has to be an id reported by the command speedtest --servers
 * measurement => What output do you want graphed? Supported values are: latency, download, and upload
-* extraargs => Extra arguments to send to speedtest
+* extraargs => Extra arguments to send to speedtest: --interface=ARG --ip=ARG
 
 Installation:
 
-The Speedtest.pm should be copied into your smokeping installation directory - for instance here: /opt/smokeping/lib/Smokeping/probes/
+The Speedtest.pm should be copied into your smokeping installation directory - for instance here: /usr/share/perl5/Smokeping/probes/
 
 Logging:
 
@@ -67,7 +67,7 @@ measurement = upload
 
 ### Add these to your Targets file.
 
-++++ cat_telecom_download_speed
+++++ download_from_cat_telecom_thailand
 menu = Download speed from CAT Telecom Public Company Limited
 title = Download speed from CAT Telecom Public Company Limited
 probe = Speedtest-download
@@ -75,7 +75,7 @@ server = 13871
 measurement = download
 host = Any word (or host fqdn/not necessary) 
 
-++++ cat_telecom_upload_speed
+++++ upload_to_cat_telecom_thailand
 menu = Upload speed to CAT Telecom Public Company Limited
 title = Upload speed to CAT Telecom Public Company Limited
 probe = Speedtest-upload
