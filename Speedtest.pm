@@ -147,7 +147,7 @@ sub pingone ($){
     $self->do_debug("query=$query\n");
     syslog("debug", "[Speedtest] query=$query");
 
-    my $lockfile = "/tmp/smokeping-speedtest-lock-$server";
+    my $lockfile = "/tmp/smokeping-speedtest-lock";
     open(my $lfh, ">>", $lockfile);
     lock($lfh);
 
