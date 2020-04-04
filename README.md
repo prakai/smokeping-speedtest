@@ -15,15 +15,18 @@ You can ask for a specific server (via the server parameter) and record a specif
 To prevent from multiple speedtest forks process: We using caching technique to cache the latest result to file. The expiration time of the results caching depends on the step parameter.
 
 Parameters:
+
 * binary => The location of your speedtest binary (/usr/bin/speedtest).
 * server => The server id you want to test against (optional). If unspecified, speedtest.net will select the closest server to you. The value has to be an id reported by the command speedtest --servers
 * measurement => What output do you want graphed? Supported values are: latency, download, and upload
 * extraargs => Extra arguments to send to speedtest
 
 Installation:
+
 The Speedtest.pm should be copied into your smokeping installation directory - for instance here: /opt/smokeping/lib/Smokeping/probes/
 
 Logging:
+
 You can get logs of what goes on inside the plugin either by running smokeping with --debug, or by changing this line:
 ```
   #set to LOG_ERR to disable debugging, LOG_DEBUG to enable it
